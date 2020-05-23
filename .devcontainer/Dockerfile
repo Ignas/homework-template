@@ -1,7 +1,6 @@
 FROM python:3.8.3-buster
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install virtualenv --yes
 RUN apt-get update \
    && apt-get -y install --no-install-recommends virtualenv \
    #
