@@ -1,0 +1,40 @@
+{
+	"name": "Python 3 service",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/home/service/.env/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.formatting.autopep8Path": "/home/service/.env/bin/autopep8",
+		"python.formatting.blackPath": "/home/service/.env/bin/black",
+		"python.formatting.yapfPath": "/home/service/.env/bin/yapf",
+		"python.linting.banditPath": "/home/service/.env/bin/bandit",
+		"python.linting.flake8Path": "/home/service/.env/bin/flake8",
+		"python.linting.mypyPath": "/home/service/.env/bin/mypy",
+		"python.linting.pycodestylePath": "/home/service/.env/bin/pycodestyle",
+		"python.linting.pydocstylePath": "/home/service/.env/bin/pydocstyle",
+		"python.linting.pylintPath": "/home/service/.env/bin/pylint",
+		"python.testing.pytestPath": "/home/service/.env/bin/pytest",
+		"python.venvPath": "/home/service/.env"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [6543],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "/home/service/.env/bin/pip install -r requirements-dev.txt -e .",
+
+	// Comment out to connect as root instead.
+	"remoteUser": "service"
+}

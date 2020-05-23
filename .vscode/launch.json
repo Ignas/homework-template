@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Pyramid Application",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/service/.env/bin/gunicorn",
+            "args": [
+                "--reload",
+                "-b", "localhost:6543",
+                "homework:application"
+            ],
+            "pyramid": true,
+            "jinja": true
+        },
+        {
+            "name": "Python: Pyramid",
+            "type": "python",
+            "request": "launch",
+            "module": "homework",
+            "pyramid": true,
+        }
+    ]
+}
