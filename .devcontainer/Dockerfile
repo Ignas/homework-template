@@ -24,5 +24,5 @@ COPY requirements.txt .
 RUN .env/bin/pip3 --disable-pip-version-check --no-cache-dir install -r ./requirements.txt
 
 # Add the application
-ADD --chown=service:service . .
-RUN .env/bin/pip3 install -e .
+ADD --chown=service:service . app
+RUN .env/bin/pip3 install -e app
