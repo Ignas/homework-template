@@ -16,13 +16,6 @@
             ],
             "pyramid": true,
             "jinja": true
-        },
-        {
-            "name": "Python: Pyramid",
-            "type": "python",
-            "request": "launch",
-            "module": "homework",
-            "pyramid": true,
         }
     ]
 }
