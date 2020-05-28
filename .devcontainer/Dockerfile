@@ -26,3 +26,7 @@ RUN .env/bin/pip3 --disable-pip-version-check --no-cache-dir install -r ./requir
 # Add the application
 ADD --chown=service:service . app
 RUN .env/bin/pip3 install -e app
+
+# We intentionally use different ports for vscode launch and docker entrypoint so they would not conflict in 
+# case you are trying to work using both approaches at the same time
+ENTRYPOINT /home/service/.env/bin/gunicorn -b 0.0.0.0:6544 homework:application
