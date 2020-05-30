@@ -1,8 +1,8 @@
-from homework import hello_world
+from homework import health
 from pyramid.response import Response
 
 
-def test_hello_world():
-    response:Response = hello_world(None)
-    assert response.body == b"Hello World!"
+def test_health():
+    response:Response = health(None)
+    assert response.body == b"OK"
     assert response.status_code == 200

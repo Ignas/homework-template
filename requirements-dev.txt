@@ -9,6 +9,7 @@ astroid==2.4.1            # via pylint
 attrs==19.3.0             # via black, pytest
 autopep8==1.5.2           # via -r requirements-dev.in
 bandit==1.6.2             # via -r requirements-dev.in
+beautifulsoup4==4.9.1     # via webtest
 black==19.10b0            # via -r requirements-dev.in
 click==7.1.2              # via black, pip-tools
 flake8==3.8.2             # via -r requirements-dev.in
@@ -33,13 +34,17 @@ pyparsing==2.4.7          # via packaging
 pytest==5.4.2             # via -r requirements-dev.in
 pyyaml==5.3.1             # via bandit
 regex==2020.5.14          # via black
-six==1.15.0               # via astroid, bandit, packaging, pip-tools, stevedore
+six==1.15.0               # via astroid, bandit, packaging, pip-tools, stevedore, webtest
 smmap==3.0.4              # via gitdb
+soupsieve==2.0.1          # via beautifulsoup4
 stevedore==1.32.0         # via bandit
 toml==0.10.1              # via black, pylint
 typed-ast==1.4.1          # via black, mypy
 typing-extensions==3.7.4.2  # via mypy
+waitress==1.4.3           # via webtest
 wcwidth==0.1.9            # via pytest
+webob==1.8.6              # via webtest
+webtest==2.0.35           # via -r requirements-dev.in
 wrapt==1.12.1             # via astroid
 yapf==0.30.0              # via -r requirements-dev.in
 
