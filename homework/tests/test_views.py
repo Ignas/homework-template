@@ -1,4 +1,4 @@
-from homework import health
+from homework.views import health
 from pyramid.response import Response
 
 
