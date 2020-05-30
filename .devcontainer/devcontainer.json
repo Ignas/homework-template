@@ -33,7 +33,7 @@
 	"forwardPorts": [6543],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/home/service/.env/bin/pip install -r requirements-dev.txt -e .",
+	"postCreateCommand": "/home/service/.env/bin/pip install -r requirements-test.txt -r requirements-dev.txt -e .",
 
 	// Comment out to connect as root instead.
 	"remoteUser": "service"
