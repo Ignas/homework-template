@@ -7,3 +7,4 @@ mypy==0.770
 pycodestyle==2.6.0
 pylint==2.5.2
 pip_tools==5.1.2
+rope==0.17.0

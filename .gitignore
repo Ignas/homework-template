@@ -2,3 +2,5 @@ __pycache__
 .pytest_cache
 homework.egg-info
 .env
+.vscode/.ropeproject
+.coverage
